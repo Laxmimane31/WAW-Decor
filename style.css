@@ -391,13 +391,41 @@ img {
 .timeline {
     max-width: 800px;
     margin: 0 auto;
-    border-left: 2px solid var(--c-bg-soft);
+    position: relative;
     padding-left: 2.5rem;
+}
+
+/* Drawing Line Animation */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 0%;
+    background: var(--c-bg-soft);
+    animation: growLine 1.5s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes growLine {
+    to {
+        height: 100%;
+    }
 }
 
 .timeline-item {
     position: relative;
     margin-bottom: 3rem;
+    transition: transform 0.3s ease, padding 0.3s ease;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
 }
 
 .timeline-item:last-child {
@@ -1337,6 +1365,7 @@ img {
         height: 200px;
     }
 }
+
 /* Submit Button */
 .submit-btn {
     width: 100%;
