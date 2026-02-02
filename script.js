@@ -273,22 +273,23 @@ window.addEventListener('click', (e) => {
 });
 
 // --- Contact Form Handling ---
-const contactForm = document.getElementById('contact-form');
-const successMsg = document.getElementById('form-success-msg');
+// --- Contact Form Handling ---
+// const contactForm = document.getElementById('contact-form');
+// const successMsg = document.getElementById('form-success-msg');
 
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const formData = new FormData(contactForm);
-        fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(formData).toString()
-        })
-        .then(() => {
-            contactForm.style.display = 'none';
-            successMsg.style.display = 'block';
-        })
-        .catch((error) => alert('Error submitting form. Please try again.'));
-    });
-}
+// if (contactForm) {
+//     contactForm.addEventListener('submit', (e) => {
+//         e.preventDefault();
+//         const formData = new FormData(contactForm);
+//         fetch('/', {
+//             method: 'POST',
+//             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+//             body: new URLSearchParams(formData).toString()
+//         })
+//         .then(() => {
+//             contactForm.style.display = 'none';
+//             successMsg.style.display = 'block';
+//         })
+//         .catch((error) => alert('Error submitting form. Please try again.'));
+//     });
+// }
