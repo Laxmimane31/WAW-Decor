@@ -717,7 +717,8 @@ img {
 }
 
 .pricing-features li::before {
-    content: 'âœ“';
+    content: '\2713';
+    /* Unicode Checkmark */
     position: absolute;
     left: 0;
     color: var(--c-gold);
@@ -1289,16 +1290,72 @@ img {
         padding-top: 40px;
     }
 }
+
 /* --- Mobile Responsiveness Refinements --- */
 @media (max-width: 768px) {
-    .section { padding: 3rem 0; }
-    .section-title { font-size: 2.2rem; }
-    .hero-title { font-size: 2.8rem; }
-    .contact-form-card { padding: 20px 0; border: none; box-shadow: none; }
-    .contact-grid-new { gap: 20px; }
-    .contact-details-sidebar { padding: 30px 0 0 0; }
-    .social-buttons { gap: 15px; }
-    .social-btn { width: 45px; height: 45px; font-size: 1.2rem; }
-    .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
-    .gallery-img { height: 200px; }
+    .section {
+        padding: 3rem 0;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .contact-form-card {
+        padding: 20px 0;
+        border: none;
+        box-shadow: none;
+    }
+
+    .contact-grid-new {
+        gap: 20px;
+    }
+
+    .contact-details-sidebar {
+        padding: 30px 0 0 0;
+    }
+
+    .social-buttons {
+        gap: 15px;
+    }
+
+    .social-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .gallery-img {
+        height: 200px;
+    }
+}
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--c-gold), #b38b4d);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(197, 160, 89, 0.4);
+    background: linear-gradient(135deg, #b38b4d, var(--c-gold));
 }
