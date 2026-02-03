@@ -88,56 +88,11 @@ faqQuestions.forEach(question => {
 });
 
 // --- Interactive Gallery Logic ---
+
+
+
 const galleryData = {
-    'Haldi & Mehendi': [
-        'images/haldi/uploaded_media_0_1769922019575.jpg',
-        'images/haldi/uploaded_media_1_1769922019575.jpg',
-        'images/haldi/uploaded_media_2_1769922019575.jpg',
-        'images/haldi/uploaded_media_3_1769922019575.jpg',
-        'images/haldi/uploaded_media_4_1769922019575.jpg',
-        'images/haldi/uploaded_media_0_1769922087457.png',
-        'images/haldi/uploaded_media_1_1769922087457.jpg',
-        'images/haldi/uploaded_media_2_1769922087457.jpg',
-        'images/haldi/uploaded_media_3_1769922087457.jpg',
-        'images/haldi/uploaded_media_4_1769922087457.jpg',
-        'images/haldi/uploaded_media_1769922148739.jpg'
-    ],
-    'Sangeet Night': [
-        'images/sangeet/sangeet_main.jpg',
-        'images/sangeet/IMG_0406.jpg',
-        'images/sangeet/IMG_0892.jpg',
-        'images/sangeet/IMG_0896.jpg',
-        'images/sangeet/IMG_0914.jpg',
-        'images/sangeet/IMG_0916.jpg',
-        'images/sangeet/IMG_1006.jpg',
-        'images/sangeet/IMG_1026.jpg',
-        'images/sangeet/IMG_1028.jpg',
-        'images/sangeet/IMG_1052.jpg',
-        'images/sangeet/IMG_1064.jpg',
-        'images/sangeet/IMG_1080.jpg',
-        'images/sangeet/IMG_1085.jpg',
-        'images/sangeet/IMG_1097.jpg',
-        'images/sangeet/IMG_1097(1).jpg',
-        'images/sangeet/IMG_1098.jpg',
-        'images/sangeet/IMG_1099.jpg',
-        'images/sangeet/IMG_1167.jpg',
-        'images/sangeet/IMG_1177.jpg',
-        'images/sangeet/IMG_1190.jpg',
-        'images/sangeet/IMG_1191.jpg',
-        'images/sangeet/IMG_1254.jpg',
-        'images/sangeet/IMG_1255.jpg',
-        'images/sangeet/IMG_1256.jpg',
-        'images/sangeet/IMG_1258.jpg',
-        'images/sangeet/IMG_1259.jpg',
-        'images/sangeet/IMG_1261.jpg',
-        'images/sangeet/IMG_1262.jpg',
-        'images/sangeet/IMG_1264.jpg',
-        'images/sangeet/IMG_1265.jpg',
-        'images/sangeet/IMG_1266.jpg',
-        'images/sangeet/IMG_1273.jpg',
-        'images/sangeet/aed3b201-a886-4761-b218-b6f919b13929.JPG'
-    ],
-    'The Wedding': [
+    'Weddings & Receptions': [
         'images/wedding/3831cfb2-e49f-471c-a434-c3c1d37cd88a.JPG',
         'images/wedding/443A67C3-437E-4387-8470-F3375D658FBE.PNG',
         'images/wedding/69c060e1-1cae-4b07-bc0f-7bf9cbd60243.JPG',
@@ -163,9 +118,8 @@ const galleryData = {
         'images/wedding/IMG_1290.jpg',
         'images/wedding/IMG_1291.jpg',
         'images/wedding/c8a34454-284f-4212-9848-74c633bdc6b9.JPG',
-        'images/wedding/ca0ec266-8809-4fe7-bfe1-6be9a2f82c80.jpg'
-    ],
-    'Reception Gala': [
+        'images/wedding/ca0ec266-8809-4fe7-bfe1-6be9a2f82c80.jpg',
+        // Reception
         'images/reception/IMG_0876.jpg',
         'images/reception/IMG_0903.jpg',
         'images/reception/IMG_1062.jpg',
@@ -180,7 +134,27 @@ const galleryData = {
         'images/reception/IMG_1272.jpg',
         'images/reception/IMG_1274.jpg'
     ],
-    'Intimate Home Decor': [
+    'Engagement & Sangeet': [
+        // Engagement
+        'images/engagements/eng_1.png',
+        'images/engagements/eng_2.png',
+        'images/engagements/eng_3.png',
+        'images/engagements/eng_4.png',
+        // Sangeet
+        'images/sangeet/sangeet_1.png',
+        'images/sangeet/sangeet_2.png',
+        'images/sangeet/sangeet_3.png',
+        'images/sangeet/sangeet_4.png',
+        'images/sangeet/sangeet_5.png'
+    ],
+    'Haldi, Mehendi & Home Ceremonies': [
+        // Haldi
+        'images/haldi/haldi_1.png',
+        'images/haldi/haldi_2.png',
+        'images/haldi/haldi_3.png',
+        'images/haldi/haldi_4.png',
+        'images/haldi/haldi_5.png',
+        // Home
         'images/home/uploaded_media_0_1769922728192.png',
         'images/home/uploaded_media_1_1769922728192.jpg',
         'images/home/uploaded_media_2_1769922728192.jpg',
@@ -188,34 +162,12 @@ const galleryData = {
         'images/home/uploaded_media_4_1769922728192.jpg',
         'images/home/uploaded_media_1769922869974.jpg'
     ],
-    'Bespoke Florals': [
-        'images/floral/uploaded_media_0_1769923145034.jpg',
-        'images/floral/uploaded_media_1_1769923145034.jpg',
-        'images/floral/uploaded_media_2_1769923145034.jpg',
-        'images/floral/uploaded_media_3_1769923145034.jpg',
-        'images/floral/uploaded_media_4_1769923145034.jpg',
-        'images/floral/uploaded_media_0_1769923249974.jpg',
-        'images/floral/uploaded_media_1_1769923249974.jpg',
-        'images/floral/uploaded_media_2_1769923249974.png'
-    ],
-    'Engagements': [
-        'images/engagements/eng_1.png',
-        'images/engagements/eng_2.png',
-        'images/engagements/eng_3.png',
-        'images/engagements/eng_4.png'
-    ],
-    'Corporate Events': [
-        'images/corporate/corp_1.png',
-        'images/corporate/corp_2.png',
-        'images/corporate/corp_3.png',
-        'images/corporate/corp_4.png'
-    ],
-    'Baby Showers': [
+    'Baby Showers & Birthdays': [
+        // Baby Showers
         'images/babyshower/uploaded_media_0_1769920881037.png',
         'images/babyshower/uploaded_media_1_1769920881037.jpg',
-        'images/babyshower/uploaded_media_2_1769920881037.jpg'
-    ],
-    'Birthdays': [
+        'images/babyshower/uploaded_media_2_1769920881037.jpg',
+        // Birthdays
         'images/birthday/uploaded_media_0_1769921392491.png',
         'images/birthday/uploaded_media_1_1769921392491.jpg',
         'images/birthday/uploaded_media_2_1769921392491.jpg',
@@ -226,6 +178,7 @@ const galleryData = {
         'images/birthday/uploaded_media_2_1769921637770.jpg',
         'images/birthday/uploaded_media_3_1769921637770.jpg'
     ]
+    // End of galleryData
 };
 
 const serviceCards = document.querySelectorAll('.service-card');
