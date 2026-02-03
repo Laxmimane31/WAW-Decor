@@ -93,6 +93,7 @@ faqQuestions.forEach(question => {
 
 const galleryData = {
     'Weddings & Receptions': [
+        // Weddings
         'images/wedding/3831cfb2-e49f-471c-a434-c3c1d37cd88a.JPG',
         'images/wedding/443A67C3-437E-4387-8470-F3375D658FBE.PNG',
         'images/wedding/69c060e1-1cae-4b07-bc0f-7bf9cbd60243.JPG',
@@ -140,20 +141,26 @@ const galleryData = {
         'images/engagements/eng_2.png',
         'images/engagements/eng_3.png',
         'images/engagements/eng_4.png',
-        // Sangeet
-        'images/sangeet/sangeet_1.png',
-        'images/sangeet/sangeet_2.png',
-        'images/sangeet/sangeet_3.png',
-        'images/sangeet/sangeet_4.png',
-        'images/sangeet/sangeet_5.png'
+        // Sangeet (Fixed Paths)
+        'images/sangeet/sangeet_main.jpg',
+        'images/sangeet/IMG_0406.jpg',
+        'images/sangeet/IMG_0892.jpg',
+        'images/sangeet/IMG_0896.jpg',
+        'images/sangeet/IMG_0914.jpg',
+        'images/sangeet/IMG_0916.jpg',
+        'images/sangeet/IMG_1006.jpg',
+        'images/sangeet/IMG_1026.jpg',
+        'images/sangeet/IMG_1028.jpg',
+        'images/sangeet/IMG_1052.jpg'
     ],
     'Haldi, Mehendi & Home Ceremonies': [
-        // Haldi
-        'images/haldi/haldi_1.png',
-        'images/haldi/haldi_2.png',
-        'images/haldi/haldi_3.png',
-        'images/haldi/haldi_4.png',
-        'images/haldi/haldi_5.png',
+        // Haldi (Fixed Paths)
+        'images/haldi/uploaded_media_0_1769922019575.jpg',
+        'images/haldi/uploaded_media_1_1769922019575.jpg',
+        'images/haldi/uploaded_media_2_1769922019575.jpg',
+        'images/haldi/uploaded_media_3_1769922019575.jpg',
+        'images/haldi/uploaded_media_4_1769922019575.jpg',
+        'images/haldi/uploaded_media_0_1769922087457.png',
         // Home
         'images/home/uploaded_media_0_1769922728192.png',
         'images/home/uploaded_media_1_1769922728192.jpg',
@@ -178,8 +185,8 @@ const galleryData = {
         'images/birthday/uploaded_media_2_1769921637770.jpg',
         'images/birthday/uploaded_media_3_1769921637770.jpg'
     ]
-    // End of galleryData
-};
+};    // End of galleryData
+
 
 const serviceCards = document.querySelectorAll('.service-card');
 const galleryModal = document.getElementById('gallery-modal');
