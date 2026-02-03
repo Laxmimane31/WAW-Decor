@@ -46,6 +46,19 @@ navLinks.addEventListener('click', (e) => {
     }
 });
 
+// Explicitly handle Contact Us button in Mobile Menu (Redundancy)
+const navContact = document.querySelector('.nav-links .btn-cta');
+if (navContact) {
+    navContact.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        const icon = mobileToggle.querySelector('i');
+        if (icon) {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+}
+
 // Intersection Observer for Scroll Animations
 const observerOptions = {
     threshold: 0.1,
