@@ -197,6 +197,28 @@ img {
     cursor: pointer;
 }
 
+.mobile-close-btn {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.8rem;
+    color: var(--c-burgundy);
+    cursor: pointer;
+    z-index: 1001;
+    transition: transform 0.3s;
+}
+
+.mobile-close-btn:hover {
+    transform: rotate(90deg) scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .mobile-close-btn {
+        display: block;
+    }
+}
+
 /* Hero */
 .hero {
     height: 100vh;

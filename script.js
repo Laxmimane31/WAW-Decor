@@ -26,6 +26,16 @@ mobileToggle.addEventListener('click', () => {
     }
 });
 
+const mobileCloseBtn = document.querySelector('.mobile-close-btn');
+if (mobileCloseBtn) {
+    mobileCloseBtn.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        const icon = mobileToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    });
+}
+
 // Close mobile menu when a link is clicked
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
