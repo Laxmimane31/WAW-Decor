@@ -36,14 +36,14 @@ if (mobileCloseBtn) {
     });
 }
 
-// Close mobile menu when a link is clicked
-document.querySelectorAll('.nav-link, .btn-cta').forEach(link => {
-    link.addEventListener('click', () => {
+// Close mobile menu when ANY link inside nav-links is clicked (Event Delegation)
+navLinks.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A' || e.target.closest('a')) {
         navLinks.classList.remove('active');
         const icon = mobileToggle.querySelector('i');
         icon.classList.remove('fa-times');
         icon.classList.add('fa-bars');
-    });
+    }
 });
 
 // Intersection Observer for Scroll Animations
