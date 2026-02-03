@@ -171,6 +171,11 @@ const galleryData = {
         'images/haldi/uploaded_media_3_1769922019575.jpg',
         'images/haldi/uploaded_media_4_1769922019575.jpg',
         'images/haldi/uploaded_media_0_1769922087457.png',
+        'images/haldi/uploaded_media_1_1769922087457.jpg',
+        'images/haldi/uploaded_media_2_1769922087457.jpg',
+        'images/haldi/uploaded_media_3_1769922087457.jpg',
+        'images/haldi/uploaded_media_4_1769922087457.jpg',
+        'images/haldi/uploaded_media_1769922148739.jpg',
         // Home
         'images/home/uploaded_media_0_1769922728192.png',
         'images/home/uploaded_media_1_1769922728192.jpg',
