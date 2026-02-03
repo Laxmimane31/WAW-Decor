@@ -388,44 +388,48 @@ img {
 }
 
 /* Timeline */
+/* Timeline Horizontal Scroll */
 .timeline {
-    max-width: 800px;
-    margin: 0 auto;
-    position: relative;
-    padding-left: 2.5rem;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    max-width: 100%;
+    /* Hide Scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin: 0 -1rem;
+    /* Full width on mobile */
 }
 
-/* Drawing Line Animation */
+.timeline::-webkit-scrollbar {
+    display: none;
+}
+
+/* No vertical line */
 .timeline::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 2px;
-    height: 0%;
-    background: var(--c-bg-soft);
-    animation: growLine 1.5s ease-out forwards;
-    animation-delay: 0.5s;
-}
-
-@keyframes growLine {
-    to {
-        height: 100%;
-    }
+    display: none;
 }
 
 .timeline-item {
+    flex: 0 0 280px;
+    /* Fixed width cards */
+    scroll-snap-align: center;
+    background: #fff;
+    border: 1px solid var(--c-bg-soft);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
     position: relative;
-    margin-bottom: 3rem;
-    transition: transform 0.3s ease, padding 0.3s ease;
-    padding: 10px;
-    border-radius: 8px;
+    margin-bottom: 0;
+    /* Override vertical margin */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .timeline-item:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .timeline-item:last-child {
@@ -433,23 +437,27 @@ img {
 }
 
 .t-icon {
-    position: absolute;
-    left: -3.8rem;
-    top: 0;
-    width: 45px;
-    height: 45px;
-    background: var(--c-bg);
-    border: 2px solid var(--c-primary);
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 1.5rem auto;
+    /* Center icon */
+    background: var(--c-bg-soft);
+    border: none;
+    color: var(--c-gold);
+    font-size: 1.5rem;
+    box-shadow: none;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--f-heading);
-    color: var(--c-primary-dark);
     font-weight: 700;
-    font-size: 1.2rem;
-    box-shadow: 0 0 0 5px var(--c-bg);
 }
+
+
 
 .t-content h4 {
     font-size: 1.4rem;
